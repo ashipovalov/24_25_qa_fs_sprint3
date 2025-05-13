@@ -12,6 +12,7 @@ public class SpeedLight {
         } else if (currentSpeed < 80) {
             return "yellow";
         } else {
+            System.out.println("Коммит в Идее для решения конфликта через ребейз");
             System.out.println("Для решения конфликта через ребейз");
             return "red";
         }
