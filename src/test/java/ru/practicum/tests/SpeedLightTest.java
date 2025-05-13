@@ -8,22 +8,24 @@ public class SpeedLightTest {
 
     @Test
     public void checkLightGreen() {
-        SpeedLight speedLight = new SpeedLight();
-        Assert.assertEquals("green", speedLight.showLight(59));
-
+        checkLight("green", 59);
     }
 
     @Test
     public void checkLightYellow() {
-        SpeedLight speedLight = new SpeedLight();
-        Assert.assertEquals("yellow", speedLight.showLight(79));
+        checkLight("yellow", 79);
     }
 
     @Test
     public void checkLightRed() {
-        SpeedLight speedLight = new SpeedLight();
-        Assert.assertEquals("red", speedLight.showLight(99));
+        checkLight("red", 99);
 
+    }
+
+
+    private static void checkLight(String color, int currentSpeed) {
+        SpeedLight speedLight = new SpeedLight();
+        Assert.assertEquals(color, speedLight.showLight(currentSpeed));
     }
 
 }
